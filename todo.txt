@@ -1,0 +1,16 @@
+##TODO
+#Handle the quotation edge case of echo function
+[DONE] #Handle the ../.. case of cd function
+[DONE] #Handle the cd <empty> case - goto root
+[DONE] #Sort the output of ls command
+[DONE] #Fix space issue in ls command
+[DONE] #Implement multiple command support
+#pinfo (add + for foreground)
+[X] #fix encoding for gedit
+
+## -- Functionality Remaining
+[DONE] 1 - Implement background / foreground processes support
+[p_DONE] 2 - Implement IO redirection, pipe and IO redirection with pipes
+[DONE] 3 - Implement Autocomplete
+4 - Implement UP arrow key functionality for history command
+[X] 5 - Implement CTRL+Z signal
