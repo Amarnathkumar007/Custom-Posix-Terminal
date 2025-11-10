@@ -1,4 +1,4 @@
-# Advanced Operating Systems
+# Custome Posix Terminal
 
 ##### Implemented a shell that supports a semi-colon separated list of commands. We need to use 'strtok' to tokenize the command. Also, support '&' operator which lets a program run in the background after printing the process id of the newly created process. 
 
@@ -120,6 +120,7 @@ Example:
 3. pinfo - add + for foreground
 4. fix encoding for GUI apps when started with execv()
 5. Implement redirection with pipes
+
 
 
 
