@@ -25,7 +25,7 @@
 using namespace std;
 
 
-class FrazUtil {
+class AmarUtil {
 
     public:
 
@@ -64,7 +64,7 @@ class FrazUtil {
         
 
         static vector<string> tokenize_string (string& input_str, const char* sep) {
-            char* c_input_string = FrazUtil::convert_to_cstr(input_str);
+            char* c_input_string = AmarUtil::convert_to_cstr(input_str);
             char* token;
             vector<string> tokenized_str;
 
@@ -158,7 +158,7 @@ class FrazUtil {
 
         static string get_parent_directory_path (string& current_pwd_path) {
             const char forward_slash_sep[] = {"/"};
-            vector<string> tokenized_output = FrazUtil::tokenize_string(current_pwd_path, forward_slash_sep);
+            vector<string> tokenized_output = AmarUtil::tokenize_string(current_pwd_path, forward_slash_sep);
             string output_str = "/";
 
             for (int i = 0; i < (int)tokenized_output.size() - 1; i++) {
@@ -275,12 +275,12 @@ int main (void) {
 
             // cout << input_command << nl;
 
-            FrazUtil::trim_start(input_command);
-            FrazUtil::trim_end(input_command);
+            AmarUtil::trim_start(input_command);
+            AmarUtil::trim_end(input_command);
             
 
             // **** Handle EXIT command
-            if (FrazUtil::is_exit(input_command)) {
+            if (AmarUtil::is_exit(input_command)) {
                 string exit_string = "exit";
                 History::push_command(exit_string);
                 goto end;
@@ -311,7 +311,7 @@ int main (void) {
 
             //Process input command
 
-            pair<string, string> cmd_args = FrazUtil::extract_command_args(input_command);
+            pair<string, string> cmd_args = AmarUtil::extract_command_args(input_command);
 
             string command = cmd_args.first;
             string args = cmd_args.second;
@@ -324,7 +324,7 @@ int main (void) {
 
             // **** Echo command Handler ****
             if (command == "echo") {
-                FrazUtil::trim_start(args);
+                AmarUtil::trim_start(args);
                 cout << Echo::echo_handler(args) << nl;
                 continue;
             }
